@@ -7,7 +7,7 @@ app.get('/myname', greeting)
 
 function greeting(req,response)
 {
-    response.send("Mahesh SE")
+    response.send("Aravind SE")
 }
 app.listen(port, () => {
 console.log(`check your greeting`)
