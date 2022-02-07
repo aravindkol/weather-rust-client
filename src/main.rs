@@ -11,7 +11,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     map.insert("password", "12345");
 
     let auth_response = client
-        .post("http://localhost:3000/v1/auth/")
+        .post("http://localhost:8000/v1/auth/")
         .json(&map)
         .send()
         .await?;
