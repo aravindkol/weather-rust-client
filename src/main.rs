@@ -7,8 +7,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let client = reqwest::Client::new();
 
     let mut map = HashMap::new();
-    map.insert("username", "rajalinv");
-    map.insert("password", "password");
+    map.insert("username", "aravind");
+    map.insert("password", "12345");
 
     let auth_response = client
         .post("http://localhost:3000/v1/auth/")
@@ -20,7 +20,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .json::<model::Token>()
         .await?;
 
-    println!("\nToken obtained!\n");
+    println!("\nToken Received!\n");
 
     let jwt_key = token_model.jwt;
 
